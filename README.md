@@ -5,7 +5,7 @@ This integration allows the use of <b>odbc_*</b> php function with Laravel frame
 It emulates PDO class used by Laravel.
 
 ### # How to install
-> `composer require abram/laravel-odbc` To add source in your project
+> `composer require waypoint/laravel-odbc` To add source in your project
 
 ### # Usage Instructions
 It's very simple to configure:
@@ -26,7 +26,7 @@ It's very simple to configure:
 ```PHP
 'providers' => [
   ...
-  Abram\Odbc\ODBCServiceProvider::class
+  Waypoint\Odbc\ODBCServiceProvider::class
 ]
 ```
 

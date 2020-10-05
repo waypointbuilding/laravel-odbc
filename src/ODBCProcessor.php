@@ -1,6 +1,6 @@
 <?php
 
-namespace Abram\Odbc;
+namespace Waypoint\Odbc;
 
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\Processors\Processor;

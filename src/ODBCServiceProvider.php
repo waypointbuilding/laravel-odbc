@@ -1,6 +1,6 @@
 <?php
 
-namespace Abram\Odbc;
+namespace Waypoint\Odbc;
 
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\Eloquent\Model;
