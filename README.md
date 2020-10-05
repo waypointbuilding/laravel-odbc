@@ -1,3 +1,5 @@
+# Package modified to have better support connecting to Snowflake
+
 ## ODBC integration for Laravel Framework
 This integration allows the use of <b>odbc_*</b> php function with Laravel framework instead of PDO.<br>
 It emulates PDO class used by Laravel.

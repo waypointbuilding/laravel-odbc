@@ -1,8 +1,7 @@
 {
-	"name": "abram/laravel-odbc",
-	"description": "ODBC integration for Laravel framework ",
+	"name": "waypoint/laravel-odbc",
+	"description": "ODBC integration for Laravel framework with snowflake support",
 	"type": "library",
-	"homepage": "https://github.com/andreossido/laravel-odbc",
 	"authors": [
 		{
 			"name": "Andrea Abram",
@@ -24,7 +23,7 @@
 	"extra": {
 		"laravel": {
 			"providers": [
-				"Abram\\Odbc\\ODBCServiceProvider"
+				"Waypoint\\Odbc\\ODBCServiceProvider"
 			]
 		}
 	}
