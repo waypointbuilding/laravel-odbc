@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Andrea
- * Date: 23/02/2018
- * Time: 17:51
- */
 
-namespace Abram\Odbc;
+namespace Waypoint\Odbc;
 
 use PDOStatement;
 
@@ -21,7 +15,6 @@ class ODBCPdoStatement extends PDOStatement
         $this->query = preg_replace('/(?<=\s|^):[^\s:]++/um', '?', $query);
 
         $this->params = $this->getParamsFromQuery($query);
-
         $this->statement = odbc_prepare($conn, $this->query);
     }
 
@@ -60,6 +53,14 @@ class ODBCPdoStatement extends PDOStatement
     {
         $records = [];
         while ($record = $this->fetch()) {
+            for ($i=1; $i <= odbc_num_fields($this->statement); $i++) { 
+                $fieldName = odbc_field_name($this->statement , $i);
+                if(odbc_field_type($this->statement , $i)=='DECIMAL') {
+                    $record[$fieldName] = floatval($record[$fieldName]);
+                }
+                $record[strtolower($fieldName)] = $record[$fieldName];
+                unset($record[$fieldName]);
+            }
             $records[] = $record;
         }
         return $records;

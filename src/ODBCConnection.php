@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Andrea
- * Date: 20/02/2018
- * Time: 15:45
- */
 
-namespace Abram\Odbc;
+namespace Waypoint\Odbc;
 
 use Illuminate\Database\Connection;
 
